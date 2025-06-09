@@ -1,0 +1,63 @@
+# SolidConcept
+
+**SolidConcept** est une plateforme web professionnelle pour la présentation et la gestion des services BTP et IT, basée sur le template [Arkitektur - Architecture HTML Template](https://htmlcodex.com/architecture-html-template) de HTML Codex.
+
+## Fonctionnalités principales
+
+- **Page d’accueil immersive** avec vidéo de fond et choix interactif du pôle (BTP ou IT)
+- **Présentation détaillée des services BTP** (construction, rénovation, gestion de chantier)
+- **Présentation détaillée des services IT** (solutions numériques, réseaux, télécoms, développement web et applicatif)
+- **Formulaire de demande de devis moderne** :
+  - Sélection du pôle (BTP ou IT) via interrupteur interactif
+  - Sélection du type de client (particulier ou entreprise)
+  - Champs dynamiques adaptés au type de client
+  - Upload de fichiers/images par drag & drop avec aperçu et suppression
+  - Prévisualisation du lien WhatsApp à partir du numéro saisi
+- **Design responsive** et respect de la charte graphique du template
+
+## Installation
+
+1. **Cloner le dépôt :**
+   ```bash
+   git clone https://github.com/pytharchimede/solidconcept.git
+   ```
+2. **Placer le dossier dans votre serveur local** (ex : `c:\wamp\www\solidconcept` pour WAMP).
+3. **Configurer vos images et vidéos** dans les dossiers `img/` et `video/`.
+4. **Adapter les fichiers PHP** si besoin pour votre environnement (chemins, emails, etc).
+
+## Dépendances
+
+- [Bootstrap 5](https://getbootstrap.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [Arkitektur HTML Template](https://htmlcodex.com/architecture-html-template) (voir licence)
+
+## Structure du projet
+
+```
+solidconcept/
+│
+├── css/
+├── img/
+├── includes/
+│   ├── header.php
+│   └── footer.php
+├── video/
+├── btp.php
+├── it.php
+├── cover.php
+├── devis.php
+├── index.php
+└── README.md
+```
+
+## Licence
+
+Ce projet utilise le template [Arkitektur](https://htmlcodex.com/architecture-html-template) de HTML Codex.  
+Merci de consulter [la licence du template](https://htmlcodex.com/license) pour les conditions d’utilisation.
+
+---
+
+**Auteur du template :** [HTML Codex](https://htmlcodex.com)  
+**Développement et adaptation :** Ulrich AMANI/ Success'Lab
+
+---
