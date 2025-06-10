@@ -201,6 +201,28 @@
             <button class="enter-btn" id="enterBtn">Entrer</button>
         </div>
         <div class="choice-section" id="choiceSection">
+            <div id="choiceMessage"
+                style="
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                background: rgba(37,37,37,0.92);
+                color: #fff;
+                padding: 22px 40px;
+                border-radius: 18px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+                text-align: center;
+                transition: opacity 0.3s;
+                pointer-events: none;
+            ">
+                <span>Choisissez un pôle en cliquant sur <span style="color:#B78D65;font-weight:600;">BTP</span> ou <span style="color:#3a3a6a;font-weight:600;">IT</span> pour continuer.<br>
+                    <small style="font-size:1rem;color:#ccc;">Survolez une zone pour révéler le bouton d'accès.</small>
+                </span>
+            </div>
             <a href="btp.php" class="choice-half">
                 <img src="img/render_btp.png" alt="BTP">
                 <div class="choice-overlay">
@@ -229,6 +251,19 @@
                 document.getElementById('coverText').style.display = 'none';
                 document.getElementById('choiceSection').style.display = 'flex';
             };
+
+            // Masquer le message d'incitation au survol d'une zone
+            const choiceMessage = document.getElementById('choiceMessage');
+            document.querySelectorAll('.choice-half').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    choiceMessage.style.opacity = '0';
+                    choiceMessage.style.pointerEvents = 'none';
+                });
+                el.addEventListener('mouseleave', () => {
+                    choiceMessage.style.opacity = '1';
+                    choiceMessage.style.pointerEvents = 'none';
+                });
+            });
         });
     </script>
 </body>
